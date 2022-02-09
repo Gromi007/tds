@@ -1,0 +1,14 @@
+{{page-title "Step1"}}
+<MultiSelect @elements="{{@model.title}}
+              @selected{{@model.selected}}"
+></MultiSelect>
+
+<div>
+  <ul>
+    {{#each @model.selected as |item|}}
+      <li>{{item.title}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+{{outlet}}
