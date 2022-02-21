@@ -1,0 +1,14 @@
+{{page-title "TestNew"}}
+<h1>TD4</h1>
+<ul>
+  {{#each @model.contacts as |contact|}}
+      <li>{{contact.nom}} <button {{action "delete" contact}}>Del</button></li>
+  {{/each}}
+</ul>
+<Input @value={{this.name}}/>
+<button {{action "add" this.name}}>Ajouter</button>
+{{#if @model.deletedsCount}}
+  <button {{action "confirmer" @model.deleteds}}>Confirmer</button>
+  <button {{action "cancelDeletion" @model.deleteds}}>Annuler la suppression ({{@model.deletedsCount}})</button>
+{{/if}}
+{{outlet}}

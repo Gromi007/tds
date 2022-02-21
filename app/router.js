@@ -6,4 +6,7 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {});
+Router.map(function () {
+  // eslint-disable-next-line ember/no-capital-letters-in-routes
+  this.route('testNew');
+});
