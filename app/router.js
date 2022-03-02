@@ -8,5 +8,8 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   // eslint-disable-next-line ember/no-capital-letters-in-routes
-  this.route('testNew');
+  this.route('contact', function () {
+    this.route('add');
+    this.route('update', { path: 'update/:contact_id' });
+  });
 });
