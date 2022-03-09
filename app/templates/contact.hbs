@@ -3,7 +3,7 @@
 <ul>
   {{#each @model.contacts as |contact|}}
   <tr>
-    <td>{{contact.nom}} {{contact.prenom}} {{contact.mail}} <button type="button" {{action "delete" contact}}>Del</button>
+    <td>{{contact.nom}} {{contact.prenom}} {{contact.mail}} <button style="background: #FF3232" type="button" {{action "delete" contact}}>Supp</button>
         <LinkTo class="btn btn-primary btn-sm" @route="contact.update" @model={{contact}}>Modifier</LinkTo></td>
   </tr>
   {{/each}}
