@@ -9,8 +9,7 @@ export default class AddController extends Controller {
   @action save(contact) {
     let c = this.store.createRecord('contact', contact);
     c.save().then(() => {
-      this.router.transitionTo('contacts');
+      this.router.transitionTo('contact');
     });
   }
 }
-

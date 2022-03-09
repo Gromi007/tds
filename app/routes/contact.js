@@ -18,8 +18,10 @@ export default class TestNewRoute extends Route {
     contact.deleteRecord();
   }
 
-  @action confirmer(contact) {
-    contact.save();
+  @action confirmer(contacts) {
+    contacts.forEach((c) => {
+      c.save();
+    });
   }
 
   @action cancelDeletion(contacts) {
