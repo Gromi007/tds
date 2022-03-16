@@ -15,4 +15,6 @@ Router.map(function () {
   this.route('categories', function () {
     this.route('add');
   });
+  this.route('Abstractroute');
+  this.route('autre');
 });
