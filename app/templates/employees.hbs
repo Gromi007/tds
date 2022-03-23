@@ -1,0 +1,7 @@
+{{page-title "Employees"}}
+<ul>
+  {{#each @model as |employee|}}
+    <li>{{employee.name}} {{employee.email}}</li>
+  {{/each}}
+</ul>
+{{outlet}}

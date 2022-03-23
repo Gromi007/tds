@@ -1,0 +1,49 @@
+{{page-title "Order"}}
+<button class="ui brown button" type="button" {{action "transition"}}>
+  Retour aux commandes à préparer
+</button>
+<div class="nometmail">
+  {{@model.employee.name}} ({{@model.employee.email}})
+</div>
+<div class="datecr">
+  {{@model.order.dateCreation}}
+</div>
+<br>
+<table>
+  <tr>
+    <td>Produit</td>
+    <td>Quantité</td>
+    <td>Prix</td>
+    <td>Montant</td>
+    <td>Preparation</td>
+  </tr>
+  <ul>
+    {{#each @model.orderdetail as |orderdetail|}}
+      <li>
+        <td>{{orderdetail.product.name}}</td>
+        <td>{{orderdetail.quantity}}</td>
+        <td>{{orderdetail.product.price}}</td>
+        <td>{{mult orderdetail.quantity orderdetail.product.price}}</td>
+        <td>
+          <checkbox></checkbox>
+        </td>
+      </li>
+    {{/each}}
+  </ul>
+  <tr>
+    <td>a</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<br>
+<h1>Produits préparés({{@model.orderdetail.prepared.count}})</h1>
+<table>
+
+</table>
+<button class="ui green button" type="button" {{action "transition"}}>
+  Valider pour €
+</button>
+{{outlet}}

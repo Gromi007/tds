@@ -1,0 +1,14 @@
+{{page-title "Index"}}
+<form {{action "login" @model on="submit"}}>
+  <Input type="email" @value={{@model.email}} placeholder="Votre email"/>
+  <Input type="password" @value={{@model.password}} placeholder="Votre mot de passe"/>
+  {{#if @model.email}}
+    {{#if @model.password}}
+      <button type="submit">Se connecter</button>
+    {{/if}}
+  {{/if}}
+  <div class="alert alert-{{this.style}}"></div>
+
+
+</form>
+{{outlet}}
