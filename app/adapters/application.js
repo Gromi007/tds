@@ -1,5 +1,5 @@
-import Adapter from 'ember-local-storage/adapters/local';
+import RESTAdapter from '@ember-data/adapter/rest';
 
-export default Adapter.extend({
-  modelNamespace: 'contact-app',
-});
+export default class ApplicationAdapter extends RESTAdapter {
+  host = 'http://127.0.0.1:8091/rest';
+}
