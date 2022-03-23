@@ -1,3 +1,18 @@
 body {
   background-color: aquamarine;
 }
+
+.datecr {
+  background-color: grey;
+  color: black;
+}
+
+.nometmail {
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  height: 60px;
+  padding-top: 18px;
+  padding-left: 10px;
+  margin-top: 20px;
+}
